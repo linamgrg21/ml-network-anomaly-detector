@@ -10,6 +10,9 @@ Machine learning-based anomaly detection system for identifying suspicious netwo
 - Classification report generation
 - Confusion matrix visualization
 - Model export using Joblib
+- NSL-KDD Dataset:
+https://www.kaggle.com/datasets/hassan06/nslkdd
+
 
 ## Technologies Used
 
@@ -57,6 +60,4 @@ The project generates:
 
 Linamgrg21
 
-NSL-KDD Dataset:
-https://www.kaggle.com/datasets/hassan06/nslkdd
 
