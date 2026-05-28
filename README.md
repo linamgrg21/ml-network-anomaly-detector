@@ -103,11 +103,11 @@ ml-network-anomaly-detector/
 ## How To Run
 
 ### Install dependencies
-=======
+
 ## How to Run
 
 Install dependencies:
->>>>>>> e337f7a9113ee0662b53f179f18f21cfe55e3507
+
 
 ```bash
 pip install -r requirements.txt
@@ -115,9 +115,9 @@ pip install -r requirements.txt
 
 
 ### Run the training script
-=======
+
 Run training script:
->>>>>>> e337f7a9113ee0662b53f179f18f21cfe55e3507
+
 
 ```bash
 python src/train.py
