@@ -1,53 +1,4 @@
 
-# ml-network-anomaly-detector
-
-Machine learning-based anomaly detection system for identifying suspicious network traffic in wireless and cloud environments.
-
----
-
-# Network Anomaly Detection Using Machine Learning
-
-## Overview
-
-This project implements a machine learning-based network anomaly detection system using the NSL-KDD dataset. The model identifies malicious or suspicious network traffic patterns and classifies potential cyberattacks.
-
-The system was trained using the `KDDTrain+` dataset and evaluated using the separate `KDDTest+` dataset to provide a more realistic and unbiased performance evaluation.
-
----
-
-## Features
-
-- Machine learning intrusion detection
-- Network traffic anomaly classification
-- Random Forest model implementation
-- Data preprocessing and feature engineering
-- Separate train/test dataset evaluation
-- Classification performance reporting
-- Confusion matrix visualization
-- Trained model export using Joblib
-
----
-
-## Technologies Used
-
-- Python
-- Pandas
-- Scikit-learn
-- NumPy
-- Matplotlib
-- Seaborn
-- Jupyter Notebook
-
----
-
-## Dataset
-
-NSL-KDD Dataset:
-
-https://www.kaggle.com/datasets/hassan06/nslkdd
-
----
-
 # ML Network Anomaly Detector
 
 Machine learning-based anomaly detection system for identifying suspicious network traffic in wireless and cloud environments.
@@ -125,21 +76,6 @@ python src/train.py
 
 
 
-## Output
-
-The project generates:
-- Trained ML model
-- Classification report
-- Confusion matrix image
-
-## Author
-
-Linamgrg21
-
-
----
-
-
 ## Model Used
 
 ### Random Forest Classifier
@@ -151,7 +87,7 @@ Why Random Forest?
 - Handles large datasets efficiently
 - Works well with classification problems
 - Reduces overfitting compared to single decision trees
-- Provides strong baseline performance for intrusion detection systems
+- Provides a strong baseline performance for intrusion detection systems
 
 ---
 
@@ -199,5 +135,5 @@ The project generates:
 ## Author
 
 Linamgrg21
-=======
+
 
