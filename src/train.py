@@ -4,45 +4,34 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import joblib
 
-from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
-print("Loading dataset...")
+print("Loading train and test datasets...")
 
-df = pd.read_csv("data/KDDTrain+.txt", header=None)
+train_df = pd.read_csv("data/KDDTrain+.txt", header=None)
+test_df = pd.read_csv("data/KDDTest+.txt", header=None)
 
-print("Dataset loaded successfully!")
-print("Dataset shape:", df.shape)
+print("Train shape:", train_df.shape)
+print("Test shape:", test_df.shape)
 
-print("Preprocessing data...")
+X_train = train_df.iloc[:, :-2]
+y_train = train_df.iloc[:, -2]
 
-# NSL-KDD format:
-# Last column = difficulty score
-# Second last column = attack label
-X = df.iloc[:, :-2]
-y = df.iloc[:, -2]
+X_test = test_df.iloc[:, :-2]
+y_test = test_df.iloc[:, -2]
 
-# Binary label: normal = 0, attack = 1
-y = y.apply(lambda label: 0 if label == "normal" else 1)
+y_train = y_train.apply(lambda label: 0 if label == "normal" else 1)
+y_test = y_test.apply(lambda label: 0 if label == "normal" else 1)
 
-# Convert categorical columns like tcp, udp, http, SF into numeric columns
-X = pd.get_dummies(X)
+print("Encoding categorical features...")
 
-# Fix sklearn column name issue
-X.columns = X.columns.astype(str)
+combined = pd.concat([X_train, X_test], axis=0)
+combined = pd.get_dummies(combined)
+combined.columns = combined.columns.astype(str)
 
-print("Feature shape after encoding:", X.shape)
-
-print("Splitting dataset...")
-
-X_train, X_test, y_train, y_test = train_test_split(
-    X,
-    y,
-    test_size=0.2,
-    random_state=42,
-    stratify=y
-)
+X_train_encoded = combined.iloc[:len(X_train)]
+X_test_encoded = combined.iloc[len(X_train):]
 
 print("Training model...")
 
@@ -52,11 +41,11 @@ model = RandomForestClassifier(
     n_jobs=-1
 )
 
-model.fit(X_train, y_train)
+model.fit(X_train_encoded, y_train)
 
 print("Making predictions...")
 
-y_pred = model.predict(X_test)
+y_pred = model.predict(X_test_encoded)
 
 accuracy = accuracy_score(y_test, y_pred)
 report = classification_report(y_test, y_pred)
@@ -85,7 +74,7 @@ sns.heatmap(
     yticklabels=["Normal", "Attack"]
 )
 
-plt.title("Network Anomaly Detection Confusion Matrix")
+plt.title("Confusion Matrix - NSL-KDD Test Set")
 plt.xlabel("Predicted")
 plt.ylabel("Actual")
 plt.tight_layout()
@@ -94,7 +83,7 @@ plt.close()
 
 joblib.dump(model, "results/model.pkl")
 
-print("Classification report saved to results/classification_report.txt")
-print("Confusion matrix saved to results/confusion_matrix.png")
-print("Model saved to results/model.pkl")
-print("Project completed successfully!")
+print("Classification report saved.")
+print("Confusion matrix saved.")
+print("Model saved.")
+print("Project completed successfully.")
