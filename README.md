@@ -1,3 +1,4 @@
+
 # ml-network-anomaly-detector
 
 Machine learning-based anomaly detection system for identifying suspicious network traffic in wireless and cloud environments.
@@ -46,17 +47,45 @@ NSL-KDD Dataset:
 https://www.kaggle.com/datasets/hassan06/nslkdd
 
 ---
+=======
+# ML Network Anomaly Detector
+
+Machine learning-based anomaly detection system for identifying suspicious network traffic in wireless and cloud environments.
+
+## Features
+
+- Network intrusion detection using Random Forest
+- NSL-KDD dataset support
+- Automatic preprocessing and encoding
+- Classification report generation
+- Confusion matrix visualization
+- Model export using Joblib
+- NSL-KDD Dataset:
+https://www.kaggle.com/datasets/hassan06/nslkdd
+
+
+## Technologies Used
+
+- Python
+- Scikit-learn
+- Pandas
+- Matplotlib
+- Seaborn
+>>>>>>> e337f7a9113ee0662b53f179f18f21cfe55e3507
 
 ## Project Structure
 
 ```text
 ml-network-anomaly-detector/
-├── app/
+│
 ├── data/
+
 │   ├── KDDTrain+.txt
 │   ├── KDDTest+.txt
 │   └── README.md
 ├── notebooks/
+=======
+>>>>>>> e337f7a9113ee0662b53f179f18f21cfe55e3507
 ├── results/
 │   ├── classification_report.txt
 │   ├── confusion_matrix.png
@@ -68,24 +97,49 @@ ml-network-anomaly-detector/
 └── README.md
 ```
 
+
 ---
 
 ## How To Run
 
 ### Install dependencies
+=======
+## How to Run
+
+Install dependencies:
+>>>>>>> e337f7a9113ee0662b53f179f18f21cfe55e3507
 
 ```bash
 pip install -r requirements.txt
 ```
 
+
 ### Run the training script
+=======
+Run training script:
+>>>>>>> e337f7a9113ee0662b53f179f18f21cfe55e3507
 
 ```bash
 python src/train.py
 ```
 
+=======
+
+## Output
+
+The project generates:
+- Trained ML model
+- Classification report
+- Confusion matrix image
+
+## Author
+
+Linamgrg21
+>>>>>>> e337f7a9113ee0662b53f179f18f21cfe55e3507
+
 ---
 
+<<<<<<< HEAD
 ## Model Used
 
 ### Random Forest Classifier
@@ -145,3 +199,5 @@ The project generates:
 ## Author
 
 Linamgrg21
+=======
+
