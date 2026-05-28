@@ -1,51 +1,62 @@
-# ml-network-anomaly-detector
+# ML Network Anomaly Detector
+
 Machine learning-based anomaly detection system for identifying suspicious network traffic in wireless and cloud environments.
 
-Network Anomaly Detection Using Machine Learning
-Overview
+## Features
 
-This project implements a machine learning-based network anomaly detection system using the NSL-KDD dataset. The model identifies malicious or suspicious network traffic patterns and classifies potential attacks.
+- Network intrusion detection using Random Forest
+- NSL-KDD dataset support
+- Automatic preprocessing and encoding
+- Classification report generation
+- Confusion matrix visualization
+- Model export using Joblib
 
-Features
-Machine learning intrusion detection
-Network traffic anomaly classification
-Random Forest model implementation
-Data preprocessing and feature engineering
-Classification performance reporting
-Technologies Used
-Python
-Pandas
-Scikit-learn
-NumPy
-Matplotlib
-Jupyter Notebook
-Dataset
+## Technologies Used
 
-NSL-KDD Dataset:
-https://www.kaggle.com/datasets/hassan06/nslkdd
+- Python
+- Scikit-learn
+- Pandas
+- Matplotlib
+- Seaborn
 
-Project Structure
+## Project Structure
+
+```text
 ml-network-anomaly-detector/
-├── app/
+│
 ├── data/
-├── notebooks/
 ├── results/
 ├── src/
 │   └── train.py
 ├── requirements.txt
 └── README.md
+```
 
-How TO Run
+## How to Run
+
+Install dependencies:
+
+```bash
 pip install -r requirements.txt
+```
+
+Run training script:
+
+```bash
 python src/train.py
+```
 
+## Output
 
-Sample Output
-Accuracy: 1.0
+The project generates:
+- Trained ML model
+- Classification report
+- Confusion matrix image
 
-Future Improvements
-Real-time traffic monitoring
-Flask dashboard integration
-Deep learning implementation
-SIEM integration
-Live packet capture using Scapy
+## Author
+
+Linamgrg21
+
+NSL-KDD Dataset:
+https://www.kaggle.com/datasets/hassan06/nslkdd
+
