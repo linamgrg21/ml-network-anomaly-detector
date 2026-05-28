@@ -47,7 +47,7 @@ NSL-KDD Dataset:
 https://www.kaggle.com/datasets/hassan06/nslkdd
 
 ---
-=======
+
 # ML Network Anomaly Detector
 
 Machine learning-based anomaly detection system for identifying suspicious network traffic in wireless and cloud environments.
@@ -71,7 +71,7 @@ https://www.kaggle.com/datasets/hassan06/nslkdd
 - Pandas
 - Matplotlib
 - Seaborn
->>>>>>> e337f7a9113ee0662b53f179f18f21cfe55e3507
+
 
 ## Project Structure
 
@@ -85,7 +85,7 @@ ml-network-anomaly-detector/
 │   └── README.md
 ├── notebooks/
 =======
->>>>>>> e337f7a9113ee0662b53f179f18f21cfe55e3507
+
 ├── results/
 │   ├── classification_report.txt
 │   ├── confusion_matrix.png
@@ -135,11 +135,11 @@ The project generates:
 ## Author
 
 Linamgrg21
->>>>>>> e337f7a9113ee0662b53f179f18f21cfe55e3507
+
 
 ---
 
-<<<<<<< HEAD
+
 ## Model Used
 
 ### Random Forest Classifier
